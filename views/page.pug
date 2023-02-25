@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Maestría
+		link(rel="stylesheet", href="/static/style.css")
+	body
+		.form
+			h2 Maestría
+			if(msg)
+				green=msg
+			form(action="/form",method="POST")
+				label(for="name") Ingresa tu nombre
+				input#name(type="text", name="name")
+				label(for="message") Ingresa un mensaje
+				textarea#message(
+					name="message",
+					cols="30", rows="5"
+				)
+				button(type="submit") Enviar
